@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold ;
+    background-color:#712cf9;
+    color: #ffff;
+    text-align: center;
+    height: 50px;
+    font-variant: small-caps;
+    padding-top: 18px;
+}
+.titulo{
+    color: #ffff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+   
+}
+.box{
+    width: 380px;
+    height: 321px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffff;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+img{
+    width: 380px;
+    padding-left: 0px;
+    padding-top: 0px
+}
+.box h1{ 
+color: black;
+text-transform: uppercase;
+font-weight: 200;
+margin-top: 2px;
+margin-bottom: 31px;
+}
+.box p{
+    color: black;
+    margin-bottom: -18px;
+    font-size: 1.1em;
+    }
+.box input[type = "text"], .box input[type = "password"]{
+ border: 0;
+ background: none;
+ display: block;
+ margin: 20px auto;
+ text-align: center;
+ border: 2px solid rgba(17, 17, 228, 0.842);
+ padding: 14px 10px;
+ width: 200px;
+ outline: none;
+ color: black;
+ border-radius: 24px;
+ transition: 0.25s;
+}
+.box input[type = "text"]:focus{
+width: 250px;
+border-color: #712cf9;  
+}
+.box input[type = "submit"]{
+border: 0;
+background-color: rgba(223, 245, 245, 0.76);
+/* background: none; */
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid  #2ecc71;
+padding: 14px 40px;
+outline: none;
+color: black;
+border-radius: 24px;
+transition: 0.25s;
+cursor: pointer;
+margin-bottom: 40px;
+}
+.box input[type = "submit"]:hover{
+background:#2ecc71;
+}
+.btn{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(17, 17, 228, 0.842);
+    color: #ffff;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.btn:hover{
+    background-color: rgba(89, 89, 223, 0.842);
+}
+footer{
+    background-color: #712cf9;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+     bottom: 0;
+     left: 0;
+     height: 30px;
+     position: fixed;
+     width: 100%;
+}
+footer p{
+    padding-top: 5px;
+}
+footer a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+color: black;
+}
