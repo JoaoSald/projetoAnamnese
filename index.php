@@ -1,30 +1,28 @@
 <?php
 include_once("conexao.php");
-if(!isset($_SESSION)){
-   session_start();
 
-   
-}
+   if(isset($_POST['submit']))
+   {
+     $nome = $_POST['nome'];
+     $idade = $_POST['idade'];
+     $endereco = $_POST['endereco'];
+     $cep = $_POST['cep'];
+     $bairro = $_POST['bairro'];
+     $cidade = $_POST['cidade'];
+     $estado = $_POST['estado'];
+     $dataNasc = $_POST['dataNasc'];
+     $profissao = $_POST['profissao'];
+     $estadoCivil = $_POST['estadoCivil'];
+     $cel = $_POST['cel'];
+     $email =$_POST['email'];
+    // $sexo = $_POST['sexo'];      
+    $result =  "INSERT INTO ficha_anamnese(nome, idade, endereco, cep, bairro, cidade, estado, dataNasc, profissao, estadoCivil, cel, email) 
+                 VALUES('$nome', '$idade', '$endereco', '$cep', '$bairro', '$cidade', '$estado', '$dataNasc', '$profissao', '$estadoCivil', '$cel', '$email')";
+    $resultado = mysqli_query( $mysqli, $result);
+      
+   //http://localhost/projetoAnamnese/index.php https://www.phpmyadmin/
+   }
 
-   $nome = $_POST['nome'];
-   $idade = $_POST['idade'];
-   $endereco = $_POST['endereco'];
-   $cep = $_POST['cep'];
-   $bairro = $_POST['bairro'];
-   $cidade = $_POST['cidade'];
-   $estado = $_POST['estado'];
-   $dataNasc = $_POST['dataNasc'];
-   $profissao = $_POST['profissao'];
-   $estadoCivil = $_POST['estadoCivil'];
-   $cel = $_POST['cel'];
-   $email =$_POST['email'];
-  // $sexo = $_POST['sexo'];    
-
-  $result =  "INSERT INTO ficha_anamnese(nome, idade, endereco, cep, bairro, cidade, estado, dataNasc, profissao, estadoCivil, cel, email) 
-               VALUES('$nome', '$idade', '$endereco', '$cep', '$bairro', '$cidade', '$estado', '$dataNasc', '$profissao', '$estadoCivil', '$cel', '$email')";
-  $resultado = mysqli_query( $mysqli, $result);
-//} 
-//http://localhost/projetoAnamnese/index.php https://www.phpmyadmin/
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -290,7 +288,7 @@ if(!isset($_SESSION)){
                      </div> <br>
 
                         <div> <br>
-                            <button class="btn"><b> Enviar</b> </button>
+                            <button class="btn" type="submit" name="submit"><b> Enviar</b> </button>
                         </div>
                <!-- fim box  -->      
                 </div>   
